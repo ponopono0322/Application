@@ -70,9 +70,15 @@ public class SubActivity extends AppCompatActivity
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        Fragment fragment = null;
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent intent = new Intent(SubActivity.this,SettingActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        else if(id == R.id.search) {
             return true;
         }
 
